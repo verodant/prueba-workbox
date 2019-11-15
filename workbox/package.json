@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sw": "workbox wizard",
-    "fileManifest": "workbox injectManifest workbox-config.js"
+    "generateSW": "workbox generateSW workbox-config.js && serve .dist/src",
+    "swWizard": "workbox wizard",
+    "fileManifest": "workbox injectManifest workbox-config.js && serve ./src"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "serve": "^11.2.0",
     "workbox-cli": "^4.3.1"
   }
 }
